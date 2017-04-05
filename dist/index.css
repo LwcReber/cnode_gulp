@@ -1,0 +1,8 @@
+.container,.container .content,.container .footer,.container .header,body,dd,dl,dt,h1,h2,h3,h4,h5,li,p,ul{margin:0;padding:0;border-radius:0;list-style:none}
+body,dd,dl,dt,h1,h2,h3,h4,h5,li,p,ul{margin:0}
+body{font-size:.14rem}
+.container{position:absolute;left:0;top:0;right:0;bottom:0;-webkit-overflow-scrolling:touch}
+.container .footer,.container .header{position:absolute;left:0;right:0;line-height:.8rem;text-align:center}
+.container .header{top:0}
+.container .footer{bottom:0}
+.container .content{position:absolute;left:0;top:40px;right:0;bottom:40px}

@@ -1,0 +1,37 @@
+body,h1,h2,h3,h4,h5,ul,li,dl,dd,dt,p{margin: 0;}
+// @import (less) "./computer.less";
+.page {
+}
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-overflow-scrolling : touch;
+
+  .header, .footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    line-height: .8rem;
+    font-size: .36rem
+    text-align: center;
+  }
+
+  .header {
+    top: 0;
+  }
+
+  .footer {
+    bottom: 0;
+  }
+
+  .content {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    right: 0;
+    bottom: 40px;
+  }
+}

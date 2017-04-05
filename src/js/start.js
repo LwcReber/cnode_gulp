@@ -6,14 +6,12 @@ angular.module('myApp.start', ['ngRoute','ngAnimate'])
   $routeProvider.when('/start', {
     templateUrl: 'tpl/start.html',
     controller: 'startCtrl'
-  })
-  
+  });
 }])
 
-.controller('startCtrl', ['$location','$timeout',function($location,$timeout) {
-
-  $timeout(function(){
-    console.log($location);
+.controller('startCtrl', ['$scope', '$location', '$timeout',function($scope, $location, $timeout) {
+  console.log('test');
+  $timeout(() => {
     $location.path('/main');
-  },3000);
+  }, 3000);
 }])
