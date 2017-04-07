@@ -10,7 +10,7 @@ window.angular.module('myApp.start', ['ngRoute','ngAnimate'])
   });
 }])
 
-.controller('homeCtrl', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+.controller('homeCtrl', ['$scope', '$http', '$timeout', '$location', function($scope, $http, $timeout, $location) {
   // 封装一个 获取后台数据的方法
   function getDatas(tab) { // tab用于切换不同tab时，
     $http.get('https://cnodejs.org/api/v1/topics?page=1&tab=' + tab + '&limit=10', {"timeout": 3000})
@@ -38,9 +38,14 @@ window.angular.module('myApp.start', ['ngRoute','ngAnimate'])
   // 切换导航方法
   $scope.changeTopic = function(tab) {
     //
+    
   }
   // topicList data
   $scope.topicList = [];
-
+  // 查看topic 详情
+  $scope.showTDetail = function(id) {
+    // 转跳到详情页
+    $location.path('/detail').search({topicID: id});
+  }
 
 }])

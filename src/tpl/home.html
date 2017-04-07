@@ -7,7 +7,9 @@
     </div>
   </div>
   <div class="content">
-    <div class="topic-item" ng-repeat='topic in topicList'>
+    <div class="topic-item"
+      ng-repeat='topic in topicList'
+      ng-click='showTDetail(topic.id)'>
       <p>{{topic.author.loginname}}</p>
       <h3>{{topic.title}}</h3>
     </div>

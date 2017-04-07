@@ -28,6 +28,17 @@ div{
     bottom: .4rem;
     background-color: $blueGrey50;
     overflow: auto;
+
+    img {
+      max-width: 100%;
+    }
+  }
+  .topic-content {
+    padding: .1rem;
+  }
+
+  .to-bottom {
+    bottom: 0;
   }
 }
 
@@ -54,7 +65,6 @@ div{
       background-color: $blueGrey900;
     }
   }
-
 }
 
 .go-back {
