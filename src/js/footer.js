@@ -12,22 +12,10 @@ window.angular.module('dir.footer', ['ngRoute', 'ngAnimate'])
         $scope.path = $location.path();
         // 导航
         $scope.navs = [
-          {
-            tab: 'home',
-            path: '/home',
-          },
-          {
-            tab: 'msg',
-            path: '/msg',
-          },
-          {
-            tab: 'publish',
-            path: '/publish',
-          },
-          {
-            tab: 'user',
-            path: '/user',
-          }
+          { tab: 'home', path: '/home' },
+          { tab: 'msg', path: '/msg' },
+          { tab: 'publish', path: '/publish' },
+          { tab: 'user', path: '/user' }
         ];
         // 切换导航时，更换路由
         $scope.changeTab = function (nav) {

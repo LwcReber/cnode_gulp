@@ -7,16 +7,6 @@
     root.style.fontSize = fz + "px";
 }(375));
 
-var CQuery = {
-  scope: '',
-  appendPic: function() {
-    console.log(this.scope);
-    setTimeout(function() {
-      this.scope.result[0] = '<img src="test"/>';
-    }.bind(this), 100)
-  }
-}
-
 // 加 window 避免 eslint 报错
 window.angular.module('myApp', [
   'ngRoute',

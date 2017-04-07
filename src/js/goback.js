@@ -11,9 +11,7 @@ window.angular.module('dir.goback', ['ngRoute','ngAnimate'])
       // },
       controller: ['$scope', '$element', '$attrs', '$transclude', function($scope, $element, $attrs, $transclude) {
         $scope.goBack = function() {
-          // $state.go(-1);
           window.history.go(-1);
-          console.log('返回');
         }
       }],
     }

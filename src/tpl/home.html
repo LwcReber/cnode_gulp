@@ -1,6 +1,11 @@
 <div class="container">
   <!-- <ng-header></ng-header> -->
-  <ng-header></ng-header>
+  <!-- <ng-header></ng-header> -->
+  <div id='header'>
+    <div class="home-nav">
+      <span ng-repeat='tab in tabs' ng-click='changeTopic(tab)'>{{tab.name}}</span>
+    </div>
+  </div>
   <div class="content">
     <div class="topic-item" ng-repeat='topic in topicList'>
       <p>{{topic.author.loginname}}</p>

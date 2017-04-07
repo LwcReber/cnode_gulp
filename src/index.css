@@ -1,4 +1,4 @@
-#footer,#footer span,#footer span.active,#header,.container,.container .content,.go-back,.page,.topic-item,body,dd,div,dl,dt,h1,h2,h3,h4,h5,li,p,ul{margin:0;padding:0;border-radius:0;list-style:none}
+#footer,#footer span,#footer span.active,#header,.container,.container .content,.go-back,.home-nav,.home-nav span,.page,.topic-item,body,dd,div,dl,dt,h1,h2,h3,h4,h5,li,p,ul{margin:0;padding:0;border-radius:0;list-style:none}
 .topic-item{margin-top:.1rem;background-color:#fff;padding:.1rem .1rem}
 body,dd,dl,dt,h1,h2,h3,h4,h5,li,p,ul{margin:0}
 div{box-sizing:border-box}
@@ -11,4 +11,6 @@ div{box-sizing:border-box}
 #footer span{width:25%}
 #footer span.active{background-color:#263238}
 .go-back{width:.4rem;float:left;margin-left:.1rem;line-height:.4rem}
+.home-nav{display:-webkit-box;display:flex}
+.home-nav span{width:20%}
 .topic-item{margin-top:.1rem;background-color:#fff;padding:.1rem .1rem}
