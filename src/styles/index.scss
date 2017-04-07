@@ -1,0 +1,65 @@
+@import "./redThreme.scss";
+@import "./topicList.scss";
+body,h1,h2,h3,h4,h5,ul,li,dl,dd,dt,p{margin: 0;}
+
+div{
+  box-sizing: border-box;
+}
+
+.page {
+  color: $baseGray;
+  font-size: 0.16rem;
+}
+
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-overflow-scrolling : touch;
+  color: $contentColor;
+
+  .content {
+    position: absolute;
+    left: 0;
+    top: .4rem;
+    right: 0;
+    bottom: .4rem;
+    background-color: $blueGrey50;
+    overflow: auto;
+  }
+}
+
+#header, #footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  line-height: .4rem;
+  font-size: .18rem;
+  text-align: center;
+  color: $textWhite;
+  background: $blueGrey600;
+  box-shadow: 1px 0px .1rem 1px $blueGrey300;
+}
+#header {
+  top: 0;
+}
+#footer {
+  bottom: 0;
+  display: flex;
+  span {
+    width: 25%;
+    &.active {
+      background-color: $blueGrey900;
+    }
+  }
+
+}
+
+.go-back {
+  width: .4rem;
+  float: left;
+  margin-left: .1rem;
+  line-height: .4rem;
+}

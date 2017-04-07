@@ -3,6 +3,7 @@ var sourcemaps = require("gulp-sourcemaps");
 var babel = require("gulp-babel");
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var eslint = require('gulp-eslint');
 
 var cssmin = require('gulp-minify-css');
 var postcss = require('gulp-postcss');
@@ -11,7 +12,7 @@ var autoreset = require('postcss-autoreset');
 // var cssnext = require('postcss-cssnext');
 var shortColor = require('postcss-short-color');
 var shortcss = require('postcss-short');
-var less = require('gulp-less');
+var sass = require('gulp-sass');
 
 var htmlmin = require('gulp-htmlmin');
 var rev = require('gulp-rev-append');
@@ -49,10 +50,10 @@ gulp.task('htmlmin', function() {
 })
 
 
-gulp.task('preless', function() {
-  gulp.src('./src/styles/**/*.less')
-    .pipe(concat('index.less'))
-    .pipe(less())
+gulp.task('presass', function() {
+  gulp.src('./src/styles/**/*.scss')
+    .pipe(concat('index.scss'))
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss(plugins))
     .pipe(cssmin({
       //类型：Boolean 默认：true [是否开启高级优化（合并选择器等）]
@@ -88,7 +89,14 @@ gulp.task('cssmin', function() {
     // .pipe(gulp.dest('./src/styles'))
 })
 
-gulp.task('jsmin', function() {
+gulp.task('lint', function() {
+  gulp.src('./src/js/**/*.js')
+  .pipe(eslint())
+  .pipe(eslint.format())
+  .pipe(eslint.failAfterError())
+})
+
+gulp.task('jsmin', ['lint'], function() {
   gulp.src('./src/js/**/*.js')
     .pipe(sourcemaps.init())
     .pipe(babel({
@@ -115,7 +123,7 @@ gulp.task('revhtml', function() {
 
 gulp.task('mywatch', function() {
   livereload.listen();
-  gulp.watch(['./src/js/**/*.js', './src/tpl/**/*.html', './src/styles/**/*.less', './src/styles/**/*.css', './src/index.html'], ['jsmin', 'htmlmin', 'preless', 'cssmin', 'revhtml'], function(event){
+  gulp.watch(['./src/js/**/*.js', './src/tpl/**/*.html', './src/styles/**/*.scss', './src/styles/**/*.css', './src/index.html'], ['jsmin', 'htmlmin', 'presass', 'cssmin', 'revhtml'], function(event){
     console.log(`${event.path} was ${event.type} , running tasks...`);
   })
 })

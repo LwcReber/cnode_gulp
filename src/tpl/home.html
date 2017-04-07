@@ -1,0 +1,11 @@
+<div class="container">
+  <!-- <ng-header></ng-header> -->
+  <ng-header></ng-header>
+  <div class="content">
+    <div class="topic-item" ng-repeat='topic in topicList'>
+      <p>{{topic.author.loginname}}</p>
+      <h3>{{topic.title}}</h3>
+    </div>
+  </div>
+  <ng-footer></ng-footer>
+</div>
