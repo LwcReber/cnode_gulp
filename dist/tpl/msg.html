@@ -1,1 +1,1 @@
-<div class="container"><div id="header"><ng-go-back></ng-go-back></div><div class="content">msg</div><ng-footer></ng-footer></div>
+<div class="container"><div id="header"><a href="#home">主页</a></div><div class="content"><div>新消息</div><div class="newMsg"><div ng-show="msg==false">无消息</div><div ng-show="msg" ng-repeat="notRead in newMsg"><p>用户id:{{notRead.id}}</p></div></div><div>过往信息</div><div class="oldMsg">{{oldMsg}}</div></div><ng-footer></ng-footer></div>

@@ -1,0 +1,1 @@
+<div class="container"><div id="header"><a href="#home">主页</a></div><div class="content"><div>用户名 : {{userMsg.loginname}}</div><div>{{uesTopiccal}}个话题收藏</div><div class="topic-item" ng-repeat="collTopic in collTopicList" ng-click="showTDetail(collTopic.id)"><p>{{collTopic.author.loginname}}</p><h5>{{collTopic.title}}</h5></div></div><ng-footer></ng-footer></div>

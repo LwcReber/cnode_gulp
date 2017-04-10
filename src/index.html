@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title></title>
-    <link rel="stylesheet" href="./common.min.css?rev=@@hash" />
     <link rel="stylesheet" href="./index.css?rev=@@hash">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
   </head>
-  <body>
+  <body ng-controller="parentCtrl">
     <div class="page" ng-view></div>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../node_modules/angular/angular.min.js"></script>
     <script src="../node_modules/angular-route/angular-route.min.js"></script>
     <script src="../node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="../node_modules/ng-infinite-scroll/build/ng-infinite-scroll.min.js" ></script>
     <script src="./app.min.js?rev=@@hash"></script>
   </body>
 </html>

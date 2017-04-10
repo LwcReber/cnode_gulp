@@ -2,6 +2,7 @@
 <div class="container">
   <div id='header'>
     <ng-go-back></ng-go-back>
+      <span ng-class='{true:"uncoll" , false:"collect"}[collStu.status == true]' ng-click="coll()" ng-show='collStu.content!=""'>{{collStu.content}}</span>
   </div>
   <div class="content to-bottom topic-content" ng-bind-html="html | to_trusted"></div>
 </div>

@@ -1,0 +1,35 @@
+<div class="container">
+  <div id="header">
+    <!-- <ng-go-back></ng-go-back> -->
+    <a href="#home">主页</a>
+  </div>
+  <div class="content">
+    <div class="publish">
+      选择板块
+      <select class="publishSel" name="" ng-model='pubSel' ng-change="get()">
+        <option value="">请选择</option>
+        <option value="ask">分享</option>
+        <option value="share">问答</option>
+        <option value="job">招聘</option>
+      </select>
+      <div class="ask" ng-show="pubSel=='ask'">
+        &nbsp&nbsp提问时，请遵循 《提问的智慧》中提及的要点，以便您更接收到高质量回复。
+      </div>
+      <div class="job" ng-show="pubSel=='job'">
+        &nbsp&nbsp为避免被管理员删帖，发帖时请好好阅读《招聘帖规范》
+      </div>
+    </div>
+    <div class="">
+      <input type="text" class="title"  placeholder="标题字数10字以上">
+    </div>
+    <div class="markdown">
+      <pre>
+
+      </pre>
+    </div>
+    <div class="commit">
+      <span>提交</span>
+    </div>
+  </div>
+  <ng-footer></ng-footer>
+</div>

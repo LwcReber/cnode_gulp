@@ -1,4 +1,4 @@
-@import "./redThreme.scss";
+@import "./threme.scss";
 @import "./topicList.scss";
 body,h1,h2,h3,h4,h5,ul,li,dl,dd,dt,p{margin: 0;}
 
@@ -21,18 +21,65 @@ div{
   color: $contentColor;
 
   .content {
-    position: absolute;
-    left: 0;
-    top: .4rem;
-    right: 0;
-    bottom: .4rem;
+    // position: absolute;
+    // left: 0;
+    // top: .4rem;
+    // right: 0;
+    // bottom: .4rem;
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+    width: 100%;
     background-color: $blueGrey50;
     overflow: auto;
 
     img {
       max-width: 100%;
     }
+    .newMsg ,.oldMsg{
+      background-color: $textWhite;
+      min-height: .5rem;
+    }
+
+    .markdow{
+      width: 100%;
+      height: 60rem;
+      border: 1px solid black;
+    }
+
+    .commit{
+      float: left;
+      width: .5rem;
+      height: .3rem;
+      background-color: rgb(37, 135, 215);
+      color: white;
+      text-align: center;
+      line-height: .3rem;
+      border-radius: 0.05rem;
+    }
+
   }
+
+  .publish{
+    margin-top: .1rem;
+    .publishSel{
+      width:1.5rem;
+      border-radius: 0.03rem;
+    }
+
+    .ask , .job{
+      text-indent:1.5em;
+    }
+  }
+  .title{
+    margin-top: .1rem;
+    margin-bottom: .1rem;
+    width: 100%;
+    height: .3rem;
+    border: 1px solid #DCDCDC;
+    border-radius: 0.05rem;
+    outline: none;
+  }
+
   .topic-content {
     padding: .1rem;
   }
@@ -43,39 +90,67 @@ div{
 }
 
 #header, #footer {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
-  line-height: .4rem;
-  font-size: .18rem;
+  line-height: .6rem;
+  font-size: .20rem;
   text-align: center;
   color: $textWhite;
   background: $blueGrey600;
   box-shadow: 1px 0px .1rem 1px $blueGrey300;
+  a{
+    color: rgb(114, 208, 109);
+  }
+  .collect , .uncoll{
+    height: .3rem;
+    margin-top: .15rem;
+    margin-right: .1rem;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    line-height: .3rem;
+    border-radius: 0.1rem;
+  }
+  .collect{
+    width:.6rem;
+    background-color:#50D719;
+  }
+  .uncoll{
+    width: 1rem;
+    background-color: #07474E;
+  }
 }
 #header {
   top: 0;
+
 }
 #footer {
   bottom: 0;
   display: flex;
+
   span {
     width: 25%;
     &.active {
       background-color: $blueGrey900;
     }
   }
+
 }
+
 
 .go-back {
   width: .4rem;
   float: left;
   margin-left: .1rem;
-  line-height: .4rem;
+  line-height: .6rem;
 }
 .home-nav {
   display: flex;
   span {
     width: 20%;
+    &.active {
+      background-color: $blueGrey900;
+    }
   }
 }
