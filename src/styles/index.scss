@@ -30,7 +30,7 @@ div{
     margin-bottom: .6rem;
     width: 100%;
     background-color: $blueGrey50;
-    overflow: auto;
+    overflow-y: hidden;
 
     img {
       max-width: 100%;
@@ -39,13 +39,6 @@ div{
       background-color: $textWhite;
       min-height: .5rem;
     }
-
-    .markdow{
-      width: 100%;
-      height: 60rem;
-      border: 1px solid black;
-    }
-
     .commit{
       float: left;
       width: .5rem;
@@ -56,13 +49,41 @@ div{
       line-height: .3rem;
       border-radius: 0.05rem;
     }
+    /* 用户登录验证*/
+    .access{
+      height: 1rem;
+      .regIpt{
+        margin-top: .1rem;
+        border: 1px solid #DCDCDC;
+        border-radius: 0.05rem;
+      }
+      .acc-warn{
+        height: .3rem;
+      }
+    }
+    /*主题编辑框*/
+    .markdown{
+      width: 100%;
+      height: 2rem;
+    }
 
+  }
+  /*用户头像*/
+  .avatar{
+    float: left;
+    width: .5rem;
+    height: .5rem;
+  }
+  //收藏的话题
+  .topiccal{
+    margin-top: .32rem;
   }
 
   .publish{
     margin-top: .1rem;
     .publishSel{
       width:1.5rem;
+      margin-left: .1rem;
       border-radius: 0.03rem;
     }
 
@@ -100,9 +121,10 @@ div{
   background: $blueGrey600;
   box-shadow: 1px 0px .1rem 1px $blueGrey300;
   a{
+    float: left;
     color: rgb(114, 208, 109);
   }
-  .collect , .uncoll{
+  .collect , .uncoll , .register {
     height: .3rem;
     margin-top: .15rem;
     margin-right: .1rem;
@@ -110,9 +132,9 @@ div{
     cursor: pointer;
     text-align: center;
     line-height: .3rem;
-    border-radius: 0.1rem;
+    border-radius: 0.08rem;
   }
-  .collect{
+  .collect , .register{
     width:.6rem;
     background-color:#50D719;
   }
@@ -120,6 +142,8 @@ div{
     width: 1rem;
     background-color: #07474E;
   }
+
+
 }
 #header {
   top: 0;

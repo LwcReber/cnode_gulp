@@ -2,13 +2,13 @@
 <div class="container">
   <div id='header'>
     <!-- <ng-go-back></ng-go-back> -->
-    <a href="#home">主页</a>
+    <a href="#home">返回主页</a>
   </div>
   <div class="content">
     <div class="">新消息</div>
     <div class="newMsg">
       <div class="" ng-show='msg==false'>
-        无消息
+        {{newMsg}}
       </div>
       <div ng-show='msg' ng-repeat="notRead in newMsg">
         <p>用户id:{{notRead.id}}</p>

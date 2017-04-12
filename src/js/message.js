@@ -11,7 +11,14 @@ window.angular.module('myApp.msg', ['ngRoute','ngAnimate'])
 
   .controller('msgCtrl', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
 
-    $http.get('https://cnodejs.org/api/v1/messages?&'+'accesstoken=32794b15-c1e8-4d80-8170-fdfb52d65a70'+'&mdrender=true')
+    $scope.oldMsg='无消息'
+    $scope.newMsg='无消息'
+    $scope.msg=false;
+
+    if(localStorage.getItem('accesstoken')==undefined){
+      return;
+    }
+    $http.get('https://cnodejs.org/api/v1/messages?&'+'accesstoken='+localStorage.getItem('accesstoken')+'&mdrender=true')
     .then(function(result){
       //新消息
       if(result.data.data.hasnot_read_messages.length==0){

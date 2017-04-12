@@ -1,11 +1,19 @@
 <div class="container">
   <div id="header">
     <!-- <ng-go-back></ng-go-back> -->
-    <a href="#home">主页</a>
+    <a href="#home">返回主页</a>
   </div>
   <div class="content">
+
+    <div class="container-fluid" ng-show="warn">
+      <div class="alert alert-danger" role="alert" >
+        <button type="button" class="close" ng-click="warn=false" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        请填写完整主题内容
+      </div>
+    </div>
+
     <div class="publish">
-      选择板块
+      选择板块<b>:</b>
       <select class="publishSel" name="" ng-model='pubSel' ng-change="get()">
         <option value="">请选择</option>
         <option value="ask">分享</option>
@@ -20,14 +28,12 @@
       </div>
     </div>
     <div class="">
-      <input type="text" class="title"  placeholder="标题字数10字以上">
+      <input type="text" class="title" ng-model="title" placeholder="标题字数10字以上">
     </div>
-    <div class="markdown">
-      <pre>
-
-      </pre>
+    <div>
+      <textarea  class='markdown' ng-model='markdown' ></textarea>
     </div>
-    <div class="commit">
+    <div class="commit" ng-click="submit()">
       <span>提交</span>
     </div>
   </div>

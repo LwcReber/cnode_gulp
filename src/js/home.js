@@ -13,6 +13,8 @@ window.angular.module('myApp.start', ['ngRoute','ngAnimate'])
 .controller('homeCtrl', ['$scope', '$http', '$timeout', '$location', function($scope, $http, $timeout, $location) {
   $scope.scroll=false;
   $scope.hasMore=true;
+  // topicList data
+  $scope.topicList = [];
 
   // 封装一个 获取后台数据的方法
   $scope.getDatas= function(tab) { // tab用于切换不同tab时，
@@ -64,8 +66,5 @@ window.angular.module('myApp.start', ['ngRoute','ngAnimate'])
     //请求对应的tab数据
     $scope.getDatas(tab.tab);
   }
-  // topicList data
-  $scope.topicList = [];
-
 
 }])
