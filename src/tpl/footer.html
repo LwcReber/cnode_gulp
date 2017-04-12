@@ -1,9 +1,0 @@
-<!--底层导航-->
-<div id="footer">
-  <span
-    ng-class='{true:"active", false: ""}[path == nav.path]'
-    ng-repeat='nav in navs'
-    ng-click='changeTab(nav)'>
-    {{nav.tab}}
-  </span>
-</div>
