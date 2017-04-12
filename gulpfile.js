@@ -44,9 +44,9 @@ var plugins = [
 
 
 gulp.task('htmlmin', function() {
-    gulp.src('./src/tpl/*.html')
-      .pipe(htmlmin(htmlOptions))
-      .pipe(gulp.dest('./dist/tpl'));
+  gulp.src('./src/tpl/*.html')
+    .pipe(htmlmin(htmlOptions))
+    .pipe(gulp.dest('./dist/tpl'));
 })
 
 
@@ -121,7 +121,12 @@ gulp.task('revhtml', function() {
     .pipe(livereload());
 })
 
-gulp.task('mywatch', function() {
+gulp.task('copyLibs', function() {
+  gulp.src('./src/libs/*')
+    .pipe(gulp.dest('./dist/libs/'))
+})
+
+gulp.task('mywatch', ['copyLibs'], function() {
   livereload.listen();
   gulp.watch(['./src/js/**/*.js', './src/tpl/**/*.html', './src/styles/**/*.scss', './src/styles/**/*.css', './src/index.html'], ['jsmin', 'htmlmin', 'presass', 'cssmin', 'revhtml'], function(event){
     console.log(`${event.path} was ${event.type} , running tasks...`);
