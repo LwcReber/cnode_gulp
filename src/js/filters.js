@@ -5,4 +5,4 @@ window.angular.module('myApp.filtes', ['ngRoute','ngAnimate'])
   return function (text) {
     return $sce.trustAsHtml(text);
   };
-}]);
+}])

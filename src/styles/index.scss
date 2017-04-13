@@ -49,30 +49,58 @@ div{
       line-height: .3rem;
       border-radius: 0.05rem;
     }
+
+    /*主题编辑框*/
+    .markdown{
+      width: 100%;
+      height: 2rem;
+      border-radius: .05rem;
+    }
+
+  }
+  //登录居中显示
+  .accCenter{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
     /* 用户登录验证*/
     .access{
-      height: 1rem;
+      width: 3rem;
+      height: 1.2rem;
+      margin-left: -1.5rem;
+      margin-top: -.6rem;
+      font-size: .2rem;
+      padding: .08rem;
       .regIpt{
-        margin-top: .1rem;
+        width: 100%;
+        margin-top: .05rem;
         border: 1px solid #DCDCDC;
         border-radius: 0.05rem;
+      }
+      .regButtun{
+        width: 100%;
+        height: .3rem;
+        margin-top: .08rem;
+        border-radius: .05rem;
+        text-align: center;
+        background-color:$blueGrey50
       }
       .acc-warn{
         height: .3rem;
       }
     }
-    /*主题编辑框*/
-    .markdown{
-      width: 100%;
-      height: 2rem;
-    }
-
   }
   /*用户头像*/
   .avatar{
-    float: left;
-    width: .5rem;
-    height: .5rem;
+    margin-top: .05rem;
+    img{
+      //float: left;
+      width: .5rem;
+      height: .5rem;
+      border-radius: .05rem;
+    }
   }
   //收藏的话题
   .topiccal{
@@ -88,7 +116,7 @@ div{
     }
 
     .ask , .job{
-      text-indent:1.5em;
+      text-indent:2em;
     }
   }
   .title{
@@ -108,6 +136,7 @@ div{
   .to-bottom {
     bottom: 0;
   }
+
 }
 
 #header, #footer {
@@ -124,6 +153,8 @@ div{
     float: left;
     color: rgb(114, 208, 109);
   }
+  //返回顶部
+
   .collect , .uncoll , .register {
     height: .3rem;
     margin-top: .15rem;
@@ -161,7 +192,18 @@ div{
   }
 
 }
-
+.goTop{
+  position: fixed;
+  right: 0;
+  bottom: 2rem;
+  width: .3rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: $orange600;
+  border-radius: .05rem;
+  color: white;
+  font-size: .16rem;
+}
 
 .go-back {
   width: .4rem;

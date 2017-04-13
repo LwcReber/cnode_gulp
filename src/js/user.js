@@ -51,17 +51,18 @@ window.angular.module('myApp.user', ['ngRoute', 'ngAnimate'])
     }
 
     //改变登录按钮显示的文字
-    if($scope.userInfo ==true){
-      $scope.regBtn = '退出'
-    }else {
-      $scope.regBtn = '登录'
-    }
+    // if($scope.userInfo ==true){
+    //   $scope.regBtn = '退出'
+    // }else {
+    //   $scope.regBtn = '登录'
+    // }
 
     $scope.reg=function(){
       //登录
-      if($scope.regBtn=='登录'){
+      console.log($scope.regBtn);
+      if($scope.userInfo==false){
         //如果没有输入accesstoken
-        if($scope.accesstoken==undefined){
+        if($scope.accesstoken==undefined||''){
           $scope.accWarn=true;
           return;
         }
@@ -70,6 +71,7 @@ window.angular.module('myApp.user', ['ngRoute', 'ngAnimate'])
         $http.post('https://cnodejs.org/api/v1/accesstoken',{accesstoken:$scope.accesstoken})
         .then(function(result){
           alert('登录成功');
+          $scope.collTopicList=[];
           $scope.userInfo=true;
           //本地保存登录状态
           localStorage.setItem('userInfo' , $scope.userInfo);
@@ -78,24 +80,22 @@ window.angular.module('myApp.user', ['ngRoute', 'ngAnimate'])
           localStorage.setItem('loginname' ,$scope.loginname)
           //替换头像
           $scope.userImg = result.data.avatar_url;
-          $scope.regBtn = '退出'
           //刷新收藏话题
           $scope.collect();
           console.log(result);
         },function(err){
           console.log(err);
-          alert('登录失败!! 原因:没有输入accesstoken,或者accesstoken不正确')
+          alert('登录失败!! 可能原因:accesstoken不正确')
         })
 
       }else {//退出登录
         //清除原有的内容
-        $scope.collTopicList.length=0;
+        $scope.accesstoken='';
         //清除当前的accesstoken
         localStorage.removeItem('accesstoken');
         $scope.userInfo=false;
         //保存退出状态
         localStorage.setItem('userInfo' , $scope.userInfo);
-        $scope.regBtn='登录'
       }
     }
 

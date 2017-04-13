@@ -36,7 +36,6 @@ var plugins = [
     reset: {
       margin: 0,
       padding: 0,
-      borderRadius: 0,
       listStyle: 'none'
     }
   })
