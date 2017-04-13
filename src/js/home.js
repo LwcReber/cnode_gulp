@@ -34,7 +34,7 @@ window.angular.module('myApp.start', ['ngRoute','ngAnimate'])
     }else {
       $scope.tabtypeShow =false;
     }
-    $http.get('https://cnodejs.org/api/v1/topics?page='+$scope.page+'&tab=' + tab + '&limit=20', {"timeout": 3000})
+    $http.get('https://cnodejs.org/api/v1/topics?page='+$scope.page+'&tab=' + tab + '&limit=10', {"timeout": 3000})
     .then(function(result) {
       if(Object.prototype.toString.call(result).indexOf('Object')!=-1){
         if(result.data.data.lenth<20){
@@ -81,7 +81,6 @@ window.angular.module('myApp.start', ['ngRoute','ngAnimate'])
   //滚动没有调用$apply 后面需要调用$apply
     var x = window.pageXOffset;
     var y = window.pageYOffset;
-    console.log(y);
     if (y > 800) {
       $scope.$apply(function(){//强制调用$digest循坏  改变变量
         $scope.toTop=true;
@@ -91,7 +90,6 @@ window.angular.module('myApp.start', ['ngRoute','ngAnimate'])
         $scope.toTop=false;
       })
     }
-    console.log($scope.toTop);
   }
 
 }])

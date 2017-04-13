@@ -59,10 +59,10 @@ window.angular.module('myApp.user', ['ngRoute', 'ngAnimate'])
 
     $scope.reg=function(){
       //登录
-      console.log($scope.regBtn);
+      console.log($scope.accesstoken);
       if($scope.userInfo==false){
         //如果没有输入accesstoken
-        if($scope.accesstoken==undefined||''){
+        if($scope.accesstoken==undefined||$scope.accesstoken==''){
           $scope.accWarn=true;
           return;
         }
@@ -85,12 +85,13 @@ window.angular.module('myApp.user', ['ngRoute', 'ngAnimate'])
           console.log(result);
         },function(err){
           console.log(err);
-          alert('登录失败!! 可能原因:accesstoken不正确')
+          alert(err.data.error_msg);
         })
 
       }else {//退出登录
         //清除原有的内容
         $scope.accesstoken='';
+        $scope.userImg='';
         //清除当前的accesstoken
         localStorage.removeItem('accesstoken');
         $scope.userInfo=false;
