@@ -2,6 +2,10 @@
 @import "./topicList.scss";
 body,h1,h2,h3,h4,h5,ul,li,dl,dd,dt,p{margin: 0;}
 
+body {
+  cursor: pointer;
+}
+
 div{
   box-sizing: border-box;
 }
@@ -149,11 +153,10 @@ div{
   color: $textWhite;
   background: $blueGrey600;
   box-shadow: 1px 0px .1rem 1px $blueGrey300;
-  a{
+  a {
     float: left;
     color: rgb(114, 208, 109);
   }
-  //返回顶部
 
   .collect , .uncoll , .register {
     height: .3rem;
@@ -192,19 +195,22 @@ div{
   }
 
 }
-.goTop{
+
+//返回顶部
+.goTop {
   position: fixed;
   right: 0;
-  bottom: 2rem;
+  bottom: .8rem;
   width: .3rem;
   text-align: center;
-  text-decoration: none;
   background-color: $orange600;
   border-radius: .05rem;
   color: white;
   font-size: .16rem;
 }
-
+.goTop:hover {
+  text-decoration: none;
+}
 .go-back {
   width: .4rem;
   float: left;

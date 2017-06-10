@@ -11,6 +11,7 @@
 .topicCont h4{width:3rem;margin-top:.05rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .topic-item:after{content:"";display:table;clear:both}
 body,dd,dl,dt,h1,h2,h3,h4,h5,li,p,ul{margin:0}
+body{cursor:pointer}
 div{box-sizing:border-box}
 .page{color:#666;font-size:.16rem}
 .container{position:absolute;left:0;top:0;right:0;bottom:0;-webkit-overflow-scrolling:touch;color:#666}
@@ -42,7 +43,8 @@ div{box-sizing:border-box}
 #footer{bottom:0;display:-webkit-box;display:flex}
 #footer span{width:25%}
 #footer span.active{background-color:#263238}
-.goTop{position:fixed;right:0;bottom:2rem;width:.3rem;text-align:center;text-decoration:none;background-color:#fb8c00;border-radius:.05rem;color:#fff;font-size:.16rem}
+.goTop{position:fixed;right:0;bottom:.8rem;width:.3rem;text-align:center;background-color:#fb8c00;border-radius:.05rem;color:#fff;font-size:.16rem}
+.goTop:hover{text-decoration:none}
 .go-back{width:.4rem;float:left;margin-left:.1rem;line-height:.6rem}
 .home-nav{display:-webkit-box;display:flex}
 .home-nav span{width:20%}
