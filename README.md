@@ -1,11 +1,15 @@
-# 项目需要启动两个命令框
+# cnode移动端
+利用conde社区网站提供的API，使用angular框架设计移动端的cnode社区
 
-### (第一步)项目安装依赖
-> npm install
+## install
+ * 在项目根目录运行命令行
+``` bash
+  $> npm install
+```
+ * 成功安装后，在**dist**文件夹里面运行命令行，创建一个本地服务器
+ ``` bash
+   $> python -m http.server 8080
+ ```
+ 浏览器输入网址 `localhost:8080`，即可看到网站
 
-### (第二步)启动项目gulp任务
-> npm start
-
-### (第三步)再启动另一个命令框, 启动项目服务
-> npm run server
->浏览器输入：localhost:8080/dist
+* 移动端直接在浏览器输入 **https://lwcreber.github.io/cnode_gulp/#!/home** 即可打开网站
