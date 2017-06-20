@@ -6,10 +6,14 @@
 ``` bash
   $> npm install
 ```
- * 成功安装后，在**dist**文件夹里面运行命令行，创建一个本地服务器
+ * 成功安装后，在**dist**文件夹里面运行命令行（需要安装 **python 3.6** 版本），创建一个本地服务器
+
  ``` bash
    $> python -m http.server 8080
  ```
  浏览器输入网址 `localhost:8080`，即可看到网站
 
-* 移动端直接在浏览器输入 **https://lwcreber.github.io/cnode_gulp/#!/home** 即可打开网站
+* 移动端在浏览器输入 **https://lwcreber.github.io/cnode_gulp/#!/home** 打开网站
+，或者扫描下面的二维码进入网站
+
+  ![image](dist/img/1497928905.png)
