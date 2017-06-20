@@ -123,6 +123,8 @@ gulp.task('revhtml', function() {
 gulp.task('copyLibs', function() {
   gulp.src('./src/libs/*')
     .pipe(gulp.dest('./dist/libs/'))
+  gulp.src('./src/img/*')
+    .pipe(gulp.dest('./dist/img/'))
 })
 
 gulp.task('mywatch', ['copyLibs'], function() {
