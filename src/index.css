@@ -1,5 +1,5 @@
 @charset "UTF-8";
-#footer,#footer .collect,#footer .register,#footer .uncoll,#footer a,#footer span,#footer span.active,#header,#header .collect,#header .register,#header .uncoll,#header a,.container,.container .accCenter,.container .accCenter .access,.container .accCenter .access .acc-warn,.container .accCenter .access .regButtun,.container .accCenter .access .regIpt,.container .avatar,.container .avatar img,.container .content,.container .content .commit,.container .content .markdown,.container .content .newMsg,.container .content .oldMsg,.container .content img,.container .publish,.container .publish .ask,.container .publish .job,.container .publish .publishSel,.container .title,.container .to-bottom,.container .topic-content,.container .topiccal,.go-back,.goTop,.home-nav,.home-nav span,.home-nav span.active,.page,.topic-item,.topic-item .topicImg,.topic-item .topicImg img,.topicCont,.topicCont .topichead,.topicCont .topichead .tabtype,.topicCont .topichead .tabtype.active,.topicCont .topichead span,.topicCont h4,body,dd,div,dl,dt,h1,h2,h3,h4,h5,li,p,ul{margin:0;padding:0;list-style:none}
+#footer,#footer .collect,#footer .register,#footer .uncoll,#footer a,#footer span,#footer span.active,#header,#header .collect,#header .register,#header .uncoll,#header a,.container,.container .accCenter,.container .accCenter .access,.container .accCenter .access .acc-warn,.container .accCenter .access .regButtun,.container .accCenter .access .regIpt,.container .avatar,.container .avatar img,.container .content,.container .content .commit,.container .content .markdown,.container .content .newMsg,.container .content .newMsgTitle,.container .content .oldMsg,.container .content .oldMsgTitle,.container .content img,.container .publish,.container .publish .ask,.container .publish .job,.container .publish .publishSel,.container .title,.container .to-bottom,.container .topic-content,.container .topiccal,.go-back,.goTop,.home-nav,.home-nav span,.home-nav span.active,.page,.topic-item,.topic-item .topicImg,.topic-item .topicImg img,.topicCont,.topicCont .topichead,.topicCont .topichead .tabtype,.topicCont .topichead .tabtype.active,.topicCont .topichead span,.topicCont h4,body,dd,div,dl,dt,h1,h2,h3,h4,h5,li,p,ul{margin:0;padding:0;list-style:none}
 .topic-item{margin-top:.1rem;background-color:#fff;height:.8rem}
 .topic-item .topicImg{float:left;width:.5rem;height:.8rem;line-height:.8rem;margin-right:.1rem}
 .topic-item .topicImg img{border-radius:50%}
@@ -17,8 +17,9 @@ div{box-sizing:border-box}
 .container{position:absolute;left:0;top:0;right:0;bottom:0;-webkit-overflow-scrolling:touch;color:#666}
 .container .content{margin-top:.6rem;margin-bottom:.6rem;width:100%;background-color:#eceff1;overflow-y:hidden}
 .container .content img{max-width:100%}
+.container .content .newMsg,.container .content .newMsgTitle,.container .content .oldMsg,.container .content .oldMsgTitle{font-size:16px}
 .container .content .newMsg,.container .content .oldMsg{background-color:#fff;min-height:.5rem}
-.container .content .commit{float:left;width:.5rem;height:.3rem;background-color:#2587d7;color:#fff;text-align:center;line-height:.3rem;border-radius:.05rem}
+.container .content .commit{float:left;width:.5rem;height:.3rem;background-color:#2587d7;color:#fff;text-align:center;line-height:.3rem;border-radius:.05rem;font-size:16px}
 .container .content .markdown{width:100%;height:2rem;border-radius:.05rem}
 .container .accCenter{position:fixed;left:50%;top:50%;right:50%;bottom:50%}
 .container .accCenter .access{width:3rem;height:1.2rem;margin-left:-1.5rem;margin-top:-.6rem;font-size:.2rem;padding:.08rem}
@@ -28,10 +29,10 @@ div{box-sizing:border-box}
 .container .avatar{margin-top:.05rem}
 .container .avatar img{width:.5rem;height:.5rem;border-radius:.05rem}
 .container .topiccal{margin-top:.32rem}
-.container .publish{margin-top:.1rem}
+.container .publish{margin-top:.1rem;font-size:16px}
 .container .publish .publishSel{width:1.5rem;margin-left:.1rem;border-radius:.03rem}
 .container .publish .ask,.container .publish .job{text-indent:2em}
-.container .title{margin-top:.1rem;margin-bottom:.1rem;width:100%;height:.3rem;border:1px solid #DCDCDC;border-radius:.05rem;outline:0}
+.container .title{margin-top:.2rem;margin-bottom:.2rem;width:100%;height:.4rem;border:1px solid #DCDCDC;border-radius:.05rem;outline:0;font-size:16px}
 .container .topic-content{padding:.1rem}
 .container .to-bottom{bottom:0}
 #footer,#header{position:fixed;left:0;right:0;line-height:.6rem;font-size:.2rem;text-align:center;color:#fff;background:#546e7a;box-shadow:1px 0 .1rem 1px #90a4ae}

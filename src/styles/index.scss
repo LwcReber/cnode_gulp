@@ -39,10 +39,14 @@ div{
     img {
       max-width: 100%;
     }
+    .newMsgTitle, .oldMsgTitle, .newMsg ,.oldMsg {
+      font-size: 16px;
+    }
     .newMsg ,.oldMsg{
       background-color: $textWhite;
       min-height: .5rem;
     }
+
     .commit{
       float: left;
       width: .5rem;
@@ -52,6 +56,7 @@ div{
       text-align: center;
       line-height: .3rem;
       border-radius: 0.05rem;
+      font-size: 16px;
     }
 
     /*主题编辑框*/
@@ -113,6 +118,7 @@ div{
 
   .publish{
     margin-top: .1rem;
+    font-size: 16px;
     .publishSel{
       width:1.5rem;
       margin-left: .1rem;
@@ -124,13 +130,14 @@ div{
     }
   }
   .title{
-    margin-top: .1rem;
-    margin-bottom: .1rem;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
     width: 100%;
-    height: .3rem;
+    height: .4rem;
     border: 1px solid #DCDCDC;
     border-radius: 0.05rem;
     outline: none;
+    font-size: 16px;
   }
 
   .topic-content {
